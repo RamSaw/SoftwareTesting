@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'hw03'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.14.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.3.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.2')
+}
+
+test {
+    useJUnitPlatform()
+}
